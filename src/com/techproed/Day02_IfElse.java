@@ -18,7 +18,7 @@ public class Day02_IfElse {
         }else{
             System.out.println("Computers Kelimesi Yok");
         }
-driver.quit();
+//driver.quit();
 
     }
 }

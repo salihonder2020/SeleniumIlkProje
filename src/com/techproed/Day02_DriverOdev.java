@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class Day02_DriverOdev {
     public static void main(String[] args) {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\Herr\\Documents\\selenium dependencies\\drivers\\chromedriver.exe");
-        WebDriver webdriver = new ChromeDriver();
+        WebDriver driver = new ChromeDriver();
         // driver'ımızı ekranı kaplayacak şekilde kullanalım.
         // 1 - ilk önce google.com'a gidelim.
         // 2 - sayfanın title'ını alalım ve ekrana yazdıralım.
@@ -15,20 +15,20 @@ public class Day02_DriverOdev {
         // 5 - google.com'a geri gelelim ve sayfanın url'ini alıp ekrana yazdıralım.
         // 6 - driver'ımızı kapatalım.
 
-        webdriver.manage().window().maximize();
-        webdriver.get("http://google.com");
-        String googleTitle = webdriver.getTitle();
+        driver.manage().window().maximize();
+        driver.get("http://google.com");
+        String googleTitle = driver.getTitle();
         System.out.println(googleTitle);
-        String googleUrl = webdriver.getCurrentUrl();
+        String googleUrl = driver.getCurrentUrl();
         System.out.println(googleUrl);
-        webdriver.navigate().to("http://youtube.com");
-        String youtubeTitle = webdriver.getTitle();
+        driver.navigate().to("http://youtube.com");
+        String youtubeTitle = driver.getTitle();
         System.out.println(youtubeTitle);
-        String youtubeUrl1 = webdriver.getCurrentUrl();
+        String youtubeUrl1 = driver.getCurrentUrl();
         System.out.println(youtubeUrl1);
-        webdriver.navigate().back();
+        driver.navigate().back();
 
-        webdriver.quit();
+        driver.quit();
     }
 
 
